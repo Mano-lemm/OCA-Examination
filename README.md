@@ -1,6 +1,6 @@
 # This is a program to use for self testing in a more streamlined manner
 
-You are required to compile it yourself, since I do not know which version of the JVM you have installed.
+You are required to compile it yourself, since I do not know which version of the JVM you have installed. <br>
 Both Intellij as well as VSCode should be able to compile it although I cannot test this for Intellij.
 
 
@@ -19,7 +19,7 @@ The parser will inform you what is wrong about the file generally. <br>
 I have not yet had time to include information such as line number that might help you debug your .iOCA file. <br>
 This will likely be introduced in the coming week. <br>
 
-.iOCA files use the following convention
+.iOCA files use the following formatting
 
     :NAME
     [NAME]

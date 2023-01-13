@@ -1,7 +1,7 @@
 package exam;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Question {
     private String name;
@@ -21,11 +21,13 @@ public class Question {
     }
 
     public Boolean isRightAnswer(String awnserString){
+        String[] awnserStrings = awnserString.split(" ");
+        Integer[] awnserIntegers = new Integer[awnserStrings.length];
+        for (int i = 0; i < awnserStrings.length; i++) {
+            awnserIntegers[i] = Integer.valueOf(awnserStrings[i]);
+        }
         try {
-            List<Integer> indices = 
-                Stream.of(awnserString.split(" "))
-                    .map(e -> Integer.valueOf(awnserString))
-                    .toList();
+            List<Integer> indices = Arrays.asList(awnserIntegers);
             for (int i = 0; i < awnsers.size(); i++) {
                 if(awnsers.get(i).getCorrect() != indices.contains(i)){
                     return false;

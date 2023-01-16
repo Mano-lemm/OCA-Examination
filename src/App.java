@@ -56,7 +56,7 @@ public class App {
         System.out.println("Type the indices of one or multiple correct answers. \n(The question might state whether or not this is the case)\n\n");
         */
 
-        System.out.print(Parsed.getT().getName());
+        System.out.println(Parsed.getT().getName());
         int totalCorrect = 0;
         try{
             for (Question question : Parsed.getT()) {

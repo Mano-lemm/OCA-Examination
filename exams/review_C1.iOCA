@@ -1,7 +1,7 @@
 :NAME
 Review Chapter 1
 
-:QUESTION 
+:QUESTION 1
 Which of the following are valid Java identifiers? (Choose all that apply)
 
 :ANSWER T
@@ -22,7 +22,7 @@ Public
 3 - fout omdat een identifier geen '.' mag bevatten
 5 - fout omdate een identifier niet mag beginnen met een getal
 
-:QUESTION
+:QUESTION 2
 What is the output of the following program?
 1:  public class WaterBottle {
 2:      private String brand;
@@ -49,3 +49,8 @@ Empty = null, Brand = null
 :END
 
 2 - juist omdat er geen init check is voor fields van een geinitialiseerde class
+
+:QUESTION 3
+Which of the following are true? (Choose all that apply)
+
+:END

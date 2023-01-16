@@ -66,6 +66,7 @@ public class IntecOCAExamParser {
                         awnsers.add(new Answer(cur.toString(), awnserIsTrue));
                         cur.setLength(0);
                         rExam.addQuestion(new Question(question, awnsers));
+                        awnsers = new ArrayList<>();
                         statement = Statements.END;
                         break;
                     default:

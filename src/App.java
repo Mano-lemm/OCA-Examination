@@ -71,6 +71,7 @@ public class App {
                 if(question.isRightAnswer(scanner.nextLine())){
                     totalCorrect++;
                 }
+                System.out.println();
             }
         } catch (Exception e) {
             //TODO: handle exception

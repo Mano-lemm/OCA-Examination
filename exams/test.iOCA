@@ -1,22 +1,18 @@
-:NAME test Examen
+:NAME
+test Examen
 
 alles wat hier tussen staat wordt genegeerd door het programma
 
 :QUESTION
 Welke programeer taal studeer je?
-
 :ANSWER F
 C#
-
 :ANSWER T
 Java
-
 :ANSWER F
 C
-
 :ANSWER F
 C++
-
 :END
 
 alles wat hier beneden staat wordt genegeerd door het programma

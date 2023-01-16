@@ -17,9 +17,7 @@ public class App {
         } else {
             try{
                 System.out.println("Please give the name of the file that should be parsed.");
-                //TODO: reverse
-                //fileName = scanner.nextLine();
-                fileName = "test.iOCA";
+                fileName = scanner.nextLine();
             } catch (Exception e) {
                 System.err.println("Scanner error.");
                 System.exit(1);
@@ -48,23 +46,26 @@ public class App {
                 break;
 
             case SUCCESS:
-                System.out.printf("The file was successfully parsed, the exam %s will start. \nYou will be scored at the end.\n", Parsed.getT().getName());
+                System.out.printf("The file was successfully parsed, the exam \"%s\" will start. \nYou will be scored at the end.\n", Parsed.getT().getName());
                 break;
         }
         
+        /*  TODO:implement -h
         System.out.println("You will be asked a question and given multiple choices for awnsers.");
         System.out.println("Each of the choices is preceded by an index in the format \"[index])\".");
         System.out.println("Type the indices of one or multiple correct answers. \n(The question might state whether or not this is the case)\n\n");
-        
+        */
+
+        System.out.print(Parsed.getT().getName());
         int totalCorrect = 0;
         try{
             for (Question question : Parsed.getT()) {
-                System.out.println(question.getName());
+                System.out.print(question.getName());
 
-                System.out.println("\noptions:");
+                System.out.println("options:");
                 List<Answer> answers = question.getAwnsers();
                 for (int i = 0; i < answers.size(); i++) {
-                    System.out.printf("%d) %s \n",i , answers.get(i).getName());
+                    System.out.printf("%d) %s",i , answers.get(i).getName());
                 }
                 
                 if(question.isRightAnswer(scanner.nextLine())){
@@ -75,7 +76,7 @@ public class App {
             //TODO: handle exception
             e.printStackTrace();
         }
-        System.out.printf("You got %d/%d this is roughly %.2f%% ",
+        System.out.printf("You got %d/%d this is roughly %.2f%% \n",
             totalCorrect, Parsed.getT().getQuestionCount(), (double) totalCorrect / Parsed.getT().getQuestionCount());
         
         scanner.close();

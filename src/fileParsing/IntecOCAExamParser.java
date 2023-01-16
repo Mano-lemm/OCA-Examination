@@ -44,11 +44,7 @@ public class IntecOCAExamParser {
 
                 switch (command) {
                     case "NAME":
-                        if (rExam.getName().equals("UNNAMED")) {
-                            rExam.setName(line.substring(6));
-                        } else{
-                            result = Result.PARTIAL;
-                        }
+                        statement = Statements.NAME;
                         break;
                     case "QUESTION":
                         statement = Statements.QUES;
@@ -73,7 +69,7 @@ public class IntecOCAExamParser {
                         statement = Statements.END;
                         break;
                     default:
-                        if(statement != Statements.NONE && !command.isBlank()){
+                        if(statement != Statements.NONE && !command.isBlank() && statement != Statements.NAME){
                             result = Result.FAILURE;
                             System.err.println("Unknown command: " + command);
                             return new Tuple<Exam,Result>(rExam, result);
@@ -90,6 +86,10 @@ public class IntecOCAExamParser {
                     case QUES:
                         cur.append(line);
                         cur.append("\n");
+                        break;
+                    case NAME:
+                        rExam.setName(line);
+                        statement = Statements.NONE;
                     default:
                         break;
                 }

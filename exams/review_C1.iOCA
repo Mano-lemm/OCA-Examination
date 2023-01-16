@@ -1,0 +1,51 @@
+:NAME
+Review Chapter 1
+
+:QUESTION 
+Which of the following are valid Java identifiers? (Choose all that apply)
+
+:ANSWER T
+A$B
+:ANSWER T
+_helloWorld
+:ANSWER F
+true
+:ANSWER F
+java.lang
+:ANSWER T
+Public
+:ANSWER F
+1980_S
+:END
+
+2 - fout omdat true een keyword is
+3 - fout omdat een identifier geen '.' mag bevatten
+5 - fout omdate een identifier niet mag beginnen met een getal
+
+:QUESTION
+What is the output of the following program?
+1:  public class WaterBottle {
+2:      private String brand;
+3:      private boolean empty;
+4:      public static void main(String[] args) {
+5:          WaterBottle wb = new WaterBottle();
+6:          System.out.print("Empty = " + wb.empty);
+7:          System.out.print(", Brand = " + wb.brand);
+8:      } 
+9:  }
+
+:ANSWER F
+Line 6 generates a compiler error.
+:ANSWER F
+Line 7 generates a compiler error.
+:ANSWER F
+There is no output.
+:ANSWER T
+Empty = false, Brand = null
+:ANSWER F
+Empty = false, Brand =
+:ANSWER F
+Empty = null, Brand = null
+:END
+
+2 - juist omdat er geen init check is voor fields van een geinitialiseerde class

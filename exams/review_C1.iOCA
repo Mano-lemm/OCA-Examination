@@ -204,3 +204,363 @@ import aquarium.jellies.Water;
 :ANSWER F
 None of these imports can make the code compile.
 :END
+
+:QUESTION 8
+Given the following class, which of the following calls print out Blue Jay? 
+(Choose all that apply)
+
+public class BirdDisplay {
+public static void main(String[] name) {
+System.out.println(name[1]);
+} }
+
+:ANSWER 
+java BirdDisplay Sparrow Blue Jay
+:ANSWER T
+java BirdDisplay Sparrow "Blue Jay"
+:ANSWER 
+java BirdDisplay Blue Jay Sparrow
+:ANSWER 
+java BirdDisplay "Blue Jay" Sparrow
+:ANSWER 
+java BirdDisplay.class Sparrow "Blue Jay"
+:ANSWER 
+java BirdDisplay.class "Blue Jay" Sparrow
+:ANSWER 
+Does not compile.
+:END
+
+
+:QUESTION 9
+Which of the following legally fill in the blank so you can run the main() method from the
+command line? (Choose all that apply)
+public static void main(
+)
+
+:ANSWER T
+String[] _names
+:ANSWER 
+String[] 123
+:ANSWER T
+String abc[]
+:ANSWER T
+String _Names[]
+:ANSWER T
+String... $n
+:ANSWER 
+String names
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 10
+Which of the following are legal entry point methods that can be run from the command
+line? (Choose all that apply)
+:ANSWER 
+private static void main(String[] args)
+:ANSWER 
+public static final main(String[] args)
+:ANSWER 
+public void main(String[] args)
+:ANSWER 
+public static void test(String[] args)
+:ANSWER T
+public static void main(String[] args)
+:ANSWER 
+public static main(String[] args)
+:ANSWER 
+ None of the above
+:END
+
+
+:QUESTION 11
+Which of the following are true? (Choose all that apply)
+:ANSWER 
+An instance variable of type double defaults to null.
+:ANSWER 
+An instance variable of type int defaults to null.
+:ANSWER T
+An instance variable of type String defaults to null.
+:ANSWER T
+An instance variable of type double defaults to 0.0.
+:ANSWER 
+An instance variable of type int defaults to 0.0.
+:ANSWER 
+An instance variable of type String defaults to 0.0.
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 12
+Which of the following are true? (Choose all that apply)
+:ANSWER 
+A local variable of type boolean defaults to null.
+:ANSWER 
+A local variable of type float defaults to 0.
+:ANSWER 
+A local variable of type Object defaults to null.
+:ANSWER 
+A local variable of type boolean defaults to false.
+:ANSWER 
+A local variable of type boolean defaults to true.
+:ANSWER 
+A local variable of type float defaults to 0.0.
+:ANSWER T
+None of the above.
+:END
+
+
+:QUESTION 13
+Which of the following are true? (Choose all that apply)
+:ANSWER 
+An instance variable of type boolean defaults to false.
+:ANSWER 
+An instance variable of type boolean defaults to true.
+:ANSWER 
+An instance variable of type boolean defaults to null.
+:ANSWER 
+An instance variable of type int defaults to 0.
+:ANSWER 
+An instance variable of type int defaults to 0.0.
+:ANSWER 
+An instance variable of type int defaults to null.
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 14
+Given the following class in the file /my/directory/named/A/Bird.java:
+INSERT CODE HERE
+public class Bird { }
+Which of the following replaces INSERT CODE HERE if we compile from /my/directory?
+(Choose all that apply)
+:ANSWER 
+package my.directory.named.a;
+:ANSWER 
+package my.directory.named.A;
+:ANSWER 
+package named.a;
+:ANSWER 
+package named.A;
+:ANSWER 
+package a;
+:ANSWER 
+package A;
+:ANSWER 
+Does not compile.
+:END
+
+
+:QUESTION 15
+Which of the following lines of code compile? (Choose all that apply)
+:ANSWER 
+int i1 = 1_234;
+:ANSWER 
+double d1 = 1_234_.0;
+:ANSWER 
+double d2 = 1_234._0;
+:ANSWER 
+double d3 = 1_234.0_;
+:ANSWER 
+double d4 = 1_234.0;
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 16
+Given the following class, which of the following lines of code can replace INSERT CODE
+HERE to make the code compile? (Choose all that apply)
+public class Price {
+public void admission() {
+INSERT CODE HERE
+System.out.println(amount);
+} }
+:ANSWER 
+int amount = 9L;
+:ANSWER 
+int amount = 0b101;
+:ANSWER 
+int amount = 0xE;
+:ANSWER 
+double amount = 0xE;
+:ANSWER 
+double amount = 1_2_.0_0;
+:ANSWER 
+int amount = 1_2_;
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 17
+Which of the following are true? (Choose all that apply)
+public class Bunny {
+public static void main(String[] args) {
+Bunny bun = new Bunny();
+} }
+:ANSWER 
+Bunny is a class.
+:ANSWER 
+bun is a class.
+:ANSWER 
+main is a class.
+:ANSWER 
+Bunny is a reference to an object.
+:ANSWER 
+bun is a reference to an object.
+:ANSWER 
+main is a reference to an object.
+:ANSWER 
+None of the above.
+:END
+
+
+:QUESTION 18
+Which represent the order in which the following statements can be assembled into a pro-
+gram that will compile successfully? (Choose all that apply)
+A: class Rabbit {}
+B: import java.util.*;
+C: package animals;
+:ANSWER 
+A, B, C
+:ANSWER 
+B, C, A
+:ANSWER 
+C, B, A
+:ANSWER 
+B, A
+:ANSWER 
+C, A
+:ANSWER 
+A, C
+:ANSWER 
+A, B
+:END
+
+
+:QUESTION 19
+Suppose we have a class named Rabbit. Which of the following statements are true?
+(Choose all that apply)
+1: public class Rabbit {
+2:  public static void main(String[] args) {
+3:  Rabbit one = new Rabbit();
+4:  Rabbit two = new Rabbit();
+5:  Rabbit three = one;
+6:  one = null;
+7:  Rabbit four = one;
+8:  three = null;
+9:  two = null;
+10: two = new Rabbit();
+11: System.gc();
+12: } }
+:ANSWER 
+ The Rabbit object from line 3 is first eligible for garbage collection immediately
+following line 6.
+:ANSWER 
+The Rabbit object from line 3 is first eligible for garbage collection immediately
+following line 8.
+:ANSWER 
+The Rabbit object from line 3 is first eligible for garbage collection immediately
+following line 12.
+:ANSWER 
+The Rabbit object from line 4 is first eligible for garbage collection immediately
+following line 9.
+:ANSWER 
+The Rabbit object from line 4 is first eligible for garbage collection immediately
+following line 11.
+:ANSWER 
+The Rabbit object from line 4 is first eligible for garbage collection immediately
+following line 12.
+:END
+
+
+:QUESTION 20
+ What is true about the following code? (Choose all that apply)
+public class Bear {
+protected void finalize() {
+System.out.println("Roar!");
+}Review Questions
+public static void main(String[] args) {
+Bear bear = new Bear();
+bear = null;
+System.gc();
+} }
+:ANSWER 
+ finalize() is guaranteed to be called.
+:ANSWER 
+finalize() might or might not be called
+:ANSWER 
+finalize() is guaranteed not to be called.
+:ANSWER 
+Garbage collection is guaranteed to run.
+:ANSWER 
+Garbage collection might or might not run.
+:ANSWER 
+Garbage collection is guaranteed not to run.
+:ANSWER 
+ The code does not compile.
+:END
+
+
+:QUESTION 21
+ What does the following code output?
+1: public class Salmon {
+2:  int count;
+3:  public void Salmon() {
+4:   count = 4;
+5:  }
+6:  public static void main(String[] args) {
+7:   Salmon s = new Salmon();
+8:   System.out.println(s.count);
+9: } }
+:ANSWER 
+ 0
+:ANSWER 
+4
+:ANSWER 
+Compilation fails on line 3.
+:ANSWER 
+Compilation fails on line 4.
+:ANSWER 
+Compilation fails on line 7.
+:ANSWER 
+Compilation fails on line 8.
+:END
+
+
+:QUESTION 22
+ Which of the following are true statements? (Choose all that apply)
+:ANSWER 
+ Java allows operator overloading.
+:ANSWER 
+Java code compiled on Windows can run on Linux.
+:ANSWER 
+Java has pointers to specific locations in memory.
+:ANSWER 
+Java is a procedural language.
+:ANSWER 
+Java is an object-oriented language.
+:ANSWER 
+Java is a functional programming language.
+:END
+
+
+:QUESTION 23
+Which of the following are true? (Choose all that apply)
+:ANSWER 
+javac compiles a .class file into a .java file.
+:ANSWER 
+javac compiles a .java file into a .bytecode file.
+:ANSWER 
+javac compiles a .java file into a .class file.
+:ANSWER 
+Java takes the name of the class as a parameter.
+:ANSWER 
+Java takes the name of the .bytecode file as a parameter.
+:ANSWER 
+Java takes the name of the .class file as a parameter.
+:END
